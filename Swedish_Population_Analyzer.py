@@ -29,11 +29,11 @@ class SwedishPopulationAnalyzer:
         response = requests.get(api_url, timeout=10)
         response.raise_for_status()  # Raises exception for bad status codes
         
-        # Parse API response (this would need to be adapted to actual SCB format)
+        # Parse API response (this would need to be adapted to actual SCB format which is a bit complicated for this example)
         api_data = response.json()
         
-        # Convert to DataFrame (simplified - real implementation would parse SCB format)
-        # This is a placeholder - actual SCB API parsing would be more complex
+        # Convert to DataFrame (simplified )
+        #   actual SCB API parsing would be more complex
         raise NotImplementedError("SCB API parsing not yet implemented")
     
     def _load_sample_data(self):
@@ -233,4 +233,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
